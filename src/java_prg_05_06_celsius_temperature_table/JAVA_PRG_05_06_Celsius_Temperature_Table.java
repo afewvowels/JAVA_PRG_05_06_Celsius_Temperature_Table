@@ -25,7 +25,27 @@ public class JAVA_PRG_05_06_Celsius_Temperature_Table {
      */
     public static void main(String[] args)
     {
-        // TODO code application logic here
+        final int INT_MIN_TEMPERATURE = 0;
+        final int INT_MAX_TEMPERATURE = 20;
+        
+        for (int i = INT_MIN_TEMPERATURE ; i <= INT_MAX_TEMPERATURE ; i++)
+        {
+            displayResults(i, celsius(i));
+        }
+        
     }
     
+    public static double celsius(int intFahrenheit)
+    {
+        double dblCelsius;
+        
+        dblCelsius = (5.0/9.0) * (intFahrenheit - 32);
+        
+        return dblCelsius;
+    }
+    
+    public static void displayResults(int intTemp, double dblCelsius)
+    {
+        System.out.println("Fahrenheit: " + intTemp + ", Celsius: " + dblCelsius);
+    }
 }
